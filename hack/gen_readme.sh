@@ -29,21 +29,20 @@ for PLATFORM in $PLATFORMS; do
 done
 
 
-cat <<'EOF' >>$OUTFILE
+cat <<EOF >>$OUTFILE
 # Pull image
 
 ## Github Docker
 
-```
-docker pull docker.pkg.github.com/$GIT_REPO/$GITHUB_DOCKER_IMAGE_NAME:<tag>
-```
+\`\`\`
+docker pull docker.pkg.github.com/${GIT_REPO}/$GITHUB_DOCKER_IMAGE_NAME:<tag>
+\`\`\`
 
 ## Docker Hub
 
-```
+\`\`\`
 docker pull $DOCKERHUB_IMAGE_NAME:<tag>
-```
-
+\`\`\`
 EOF
 
 cat $OUTFILE

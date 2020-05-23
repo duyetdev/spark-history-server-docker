@@ -15,12 +15,11 @@ Docker image for Spark history Server on Kubernetes
 ## Github Docker
 
 ```
-docker pull docker.pkg.github.com/$GIT_REPO/$GITHUB_DOCKER_IMAGE_NAME:<tag>
+docker pull docker.pkg.github.com/duyetdev/spark-history-server-docker/spark-history-server:<tag>
 ```
 
 ## Docker Hub
 
 ```
-docker pull $DOCKERHUB_IMAGE_NAME:<tag>
+docker pull duyetdev/spark-history-server:<tag>
 ```
-
