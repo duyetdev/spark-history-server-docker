@@ -34,11 +34,15 @@ cat <<EOF >>$OUTFILE
 
 ## Github Docker
 
+Package: https://github.com/duyetdev/spark-history-server-docker/packages/238883
+
 \`\`\`
 docker pull docker.pkg.github.com/${GIT_REPO}/$GITHUB_DOCKER_IMAGE_NAME:<tag>
 \`\`\`
 
 ## Docker Hub
+
+Docker Hub: https://hub.docker.com/r/duyetdev/spark-history-server
 
 \`\`\`
 docker pull $DOCKERHUB_IMAGE_NAME:<tag>
