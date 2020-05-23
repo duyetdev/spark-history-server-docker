@@ -21,7 +21,7 @@ for PLATFORM in $PLATFORMS; do
     printf ' - ' >> $OUTFILE
 
     for VERSION in $SPARK_VERSION; do
-        printf "[$PLATFORM-$VERSION](https://hub.docker.com/r/$DOCKERHUB_IMAGE_NAME/tags) " >> $OUTFILE
+        printf "\`$PLATFORM-$VERSION\` " >> $OUTFILE
     done
 
     echo >> $OUTFILE
