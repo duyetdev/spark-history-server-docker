@@ -15,7 +15,7 @@ jobs:
       - uses: mr-smithers-excellent/docker-build-push@v3
         name: Build & Push Github-AWS
         with:
-          image: duyetdev/spark-history-server-docker/spark-history-server
+          image: spark-history-server-docker/spark-history-server
           registry: docker.pkg.github.com
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }} 
