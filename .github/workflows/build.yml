@@ -5,29 +5,150 @@ on:
       - master
 
 jobs:
-  build:
-    name: Build for AWS
+  build_aws:
+    name: Build for aws
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        name: Check out code
+    - uses: actions/checkout@v2
+      name: Check out code
 
-      - uses: mr-smithers-excellent/docker-build-push@v3
-        name: Build & Push Github-AWS
-        with:
-          image: spark-history-server-docker/spark-history-server
-          registry: docker.pkg.github.com
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }} 
-          buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
-          tag: aws-latest
 
-      - uses: mr-smithers-excellent/docker-build-push@v3
-        name: Build & Push Dockerhub-AWS
-        with:
-          image: duyetdev/spark-history-server
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
-          tag: aws-latest
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:aws-latest
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
+        tag: aws-latest
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:aws-latest
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
+        tag: aws-latest
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:aws-v2.4.0
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
+        tag: aws-v2.4.0
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:aws-v2.4.0
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=aws
+        tag: aws-v2.4.0
+
+  build_gcp:
+    name: Build for gcp
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Check out code
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:gcp-latest
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=gcp
+        tag: gcp-latest
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:gcp-latest
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=gcp
+        tag: gcp-latest
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:gcp-v2.4.0
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=gcp
+        tag: gcp-v2.4.0
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:gcp-v2.4.0
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=gcp
+        tag: gcp-v2.4.0
+
+  build_azure:
+    name: Build for azure
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: Check out code
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:azure-latest
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=azure
+        tag: azure-latest
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:azure-latest
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=azure
+        tag: azure-latest
+
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:azure-v2.4.0
+      with:
+        image: spark-history-server-docker/spark-history-server
+        registry: docker.pkg.github.com
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }} 
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=azure
+        tag: azure-v2.4.0
+
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      name: Build & Push docker.io/duyetdev/spark-history-server:azure-v2.4.0
+      with:
+        image: duyetdev/spark-history-server
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        buildArgs: SPARK_VERSION=v2.4.0,BUILD_PLATFORM=azure
+        tag: azure-v2.4.0
+
