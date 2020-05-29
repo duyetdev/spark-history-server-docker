@@ -18,6 +18,7 @@ FROM ${SPARK_IMAGE}:${SPARK_VERSION} as build_aws
 ADD https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar $SPARK_HOME/jars
 # Add hadoop-aws to access Amazon S3
 ADD https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.5/hadoop-aws-2.7.5.jar $SPARK_HOME/jars
+ADD https://repo1.maven.org/maven2/net/java/dev/jets3t/jets3t/0.9.4/jets3t-0.9.4.jar $SPARK_HOME/jars
 
 # Build for Azure
 FROM ${SPARK_IMAGE}:${SPARK_VERSION} as build_azure
