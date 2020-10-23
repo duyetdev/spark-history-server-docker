@@ -3,7 +3,7 @@
 # Run this hack from root.
 
 PLATFORMS="aws gcp azure"
-SPARK_VERSION=v2.4.0
+SPARK_VERSION=${1:-v2.4.0}
 OUTFILE=".github/workflows/build.yml"
 
 cat <<'EOF' >$OUTFILE
@@ -38,7 +38,7 @@ EOF
         image: spark-history-server-docker/spark-history-server
         registry: docker.pkg.github.com
         username: \${{ github.actor }}
-        password: \${{ secrets.GITHUB_TOKEN }} 
+        password: \${{ secrets.GITHUB_TOKEN }}
         buildArgs: SPARK_VERSION=$SPARK_VERSION,BUILD_PLATFORM=$PLATFORM
         tag: $IMAGE_TAG
 
