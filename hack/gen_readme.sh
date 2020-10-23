@@ -5,7 +5,7 @@ GIT_REPO="duyetdev/spark-history-server-docker"
 DOCKERHUB_IMAGE_NAME="duyetdev/spark-history-server"
 GITHUB_DOCKER_IMAGE_NAME="spark-history-server"
 PLATFORMS="aws gcp azure"
-SPARK_VERSION="v2.4.0 latest"
+SPARK_VERSION="v3.0.0 v2.4.0 latest"
 OUTFILE="README.md"
 
 cat <<'EOF' >$OUTFILE
