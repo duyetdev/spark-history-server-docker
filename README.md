@@ -4,11 +4,11 @@ Docker image for Spark history Server on Kubernetes
 
 # Supported tags
 
- - `aws-v2.4.0` `aws-latest` 
+ - `aws-v3.0.0` `aws-v2.4.0` `aws-latest` 
 
- - `gcp-v2.4.0` `gcp-latest` 
+ - `gcp-v3.0.0` `gcp-v2.4.0` `gcp-latest` 
 
- - `azure-v2.4.0` `azure-latest` 
+ - `azure-v3.0.0` `azure-v2.4.0` `azure-latest` 
 
 # Pull image
 
