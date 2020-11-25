@@ -13,7 +13,7 @@ jobs:
       name: Check out code
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:aws-latest
       with:
         image: spark-history-server-docker/spark-history-server
@@ -23,7 +23,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=aws
         tag: aws-latest
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:aws-latest
       with:
         image: duyetdev/spark-history-server
@@ -34,7 +34,7 @@ jobs:
         tag: aws-latest
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:aws-v3.0.0
       with:
         image: spark-history-server-docker/spark-history-server
@@ -44,7 +44,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=aws
         tag: aws-v3.0.0
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:aws-v3.0.0
       with:
         image: duyetdev/spark-history-server
@@ -62,7 +62,7 @@ jobs:
       name: Check out code
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:gcp-latest
       with:
         image: spark-history-server-docker/spark-history-server
@@ -72,7 +72,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=gcp
         tag: gcp-latest
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:gcp-latest
       with:
         image: duyetdev/spark-history-server
@@ -83,7 +83,7 @@ jobs:
         tag: gcp-latest
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:gcp-v3.0.0
       with:
         image: spark-history-server-docker/spark-history-server
@@ -93,7 +93,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=gcp
         tag: gcp-v3.0.0
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:gcp-v3.0.0
       with:
         image: duyetdev/spark-history-server
@@ -111,7 +111,7 @@ jobs:
       name: Check out code
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:azure-latest
       with:
         image: spark-history-server-docker/spark-history-server
@@ -121,7 +121,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=azure
         tag: azure-latest
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:azure-latest
       with:
         image: duyetdev/spark-history-server
@@ -132,7 +132,7 @@ jobs:
         tag: azure-latest
 
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.pkg.github.com/spark-history-server-docker/spark-history-server:azure-v3.0.0
       with:
         image: spark-history-server-docker/spark-history-server
@@ -142,7 +142,7 @@ jobs:
         buildArgs: SPARK_VERSION=v3.0.0,BUILD_PLATFORM=azure
         tag: azure-v3.0.0
 
-    - uses: mr-smithers-excellent/docker-build-push@v3
+    - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push docker.io/duyetdev/spark-history-server:azure-v3.0.0
       with:
         image: duyetdev/spark-history-server
